@@ -97,6 +97,7 @@ document.getElementById('leave-btn').addEventListener('click', async () => {
 
     document.querySelector('.profile').style.display = 'block';
     document.getElementById('footer').style.display = 'none'
+    document.querySelector('.refugeeInfo').style.display = 'none'
     document.getElementById('user-streams').innerHTML = ''
 
 })
