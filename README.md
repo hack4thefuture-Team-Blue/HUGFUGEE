@@ -18,6 +18,6 @@
 <br>
 <p>We hope you enjoy using this app 🍀</p>
 <br>
-<p>Link: https://peppy-biscochitos-d92857.netlify.app/home.html</p>
+<p>Link: https://delicate-bublanina-2b076c.netlify.app/</p>
 <br>
 <p>Let's make this world a better world - <b>together</b>🕊</p>
