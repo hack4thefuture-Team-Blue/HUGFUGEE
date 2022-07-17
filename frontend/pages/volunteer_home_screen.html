@@ -1,157 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/videoStyle.css">
-    <link rel="icon" type="image/x-icon" href="../images/hugfugee_favicon.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300&family=Permanent+Marker&display=swap" rel="stylesheet">
-    <title>Volunteer Home Screen</title>
-    <style>
-      .switch {
-        position: relative;
-        display: inline-block;
-        width: 60px;
-        height: 34px;
-      }
-      
-      .switch input { 
-        opacity: 0;
-        width: 0;
-        height: 0;
-      }
-      
-      .slider {
-        position: absolute;
-        cursor: pointer;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background-color:red;
-        -webkit-transition: .4s;
-        transition: .4s;
-      }
-      
-      .slider:before {
-        position: absolute;
-        content: "";
-        height: 26px;
-        width: 26px;
-        left: 4px;
-        bottom: 4px;
-        background-color: white;
-        -webkit-transition: .4s;
-        transition: .4s;
-      }
-      
-      input:checked + .slider {
-        background-color: green;
-      }
-      
-      input:focus + .slider {
-        box-shadow: 0 0 1px #2196F3;
-      }
-      
-      input:checked + .slider:before {
-        -webkit-transform: translateX(26px);
-        -ms-transform: translateX(26px);
-        transform: translateX(26px);
-      }
-      
-      /* Rounded sliders */
-      .slider.round {
-        border-radius: 34px;
-      }
-      
-      .slider.round:before {
-        border-radius: 50%;
-      }
-      </style>
 
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/videoStyle.css">
+  <link rel="icon" type="image/x-icon" href="../images/hugfugee_favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300&family=Permanent+Marker&display=swap"
+    rel="stylesheet">
+  <title>HUGFUGEE - Volunteer Home Screen</title>
 </head>
-  <body>
-    <header>
-      <a href="../home.html"><img src="../images/hugfugee_logo.png" alt="logo"></a>
+
+<body>
+  <header>
+    <a href="../home.html"><img src="../images/hugfugee_logo.png" alt="logo"></a>
   </header>
   <main>
     <div class="profile">
-      <img src="../images/Enrique.bmp" alt="prof pic" />
-      <p>Enrique Nunez Velazco</p>
-    
-    <a href="./profile.html"><button>Change Profile</button></a>
-    <h3>refuges need help right now</h3>
-    <div>
+      <div class="profileIMGname">
+        <img src="../images/Enrique.bmp" alt="prof pic" />
+        <div>
+          <p>Enrique </p>
+          <p>Nunez Velazco</p>
+        </div>
+      </div>
+      <a href="./profile.html" class="profilSettings">Profile Settings</a>
+      <div class="listRefugeesOnline">
+        <h3>refuges need help right now:</h3>
         <ul id="refugees">
-            <li>Arabic-speaking (3)</li>
-            <li>Farsi-speaking (2)</li>
-            <li>Ukrainian-speaking (15)</li>
+          <li>Arabic-speaking (3)</li>
+          <li>Dari-speaking (2)</li>
+          <li>Ukrainian-speaking (15)</li>
         </ul>
+      </div>
+      <div class="status">
+        <p>Status</p>
+        <label class="switch">
+          <input type="checkbox" checked>
+          <span class="slider round"></span>
+        </label>
+      </div>
     </div>
-    <div class="status">
-      <p>Status</p>
-    <label class="switch">
-      <input type="checkbox" checked>
-      <span class="slider round"></span>
-    </label>
-  </div>
-</div>
-  <div class="video-call" style="display:none">
-        
-    <div id="user-streams" style="height: 50%;"></div>
-    
+    <div class="video-call" style="display:none">
+
+      <div id="user-streams" style="height: 50%;"></div>
 
 
-    <!-- Wrapper for join button -->
-    <div id="footer">
+
+      <!-- Wrapper for join button -->
+      <div id="footer">
         <div class="icon-wrapper">
-            <img class="control-icon" id="camera-btn" src="../images/videocall/video.svg" />
-            <p>Cam</p>
+          <img class="control-icon" id="camera-btn" src="../images/videocall/video.svg" />
+          <p>Cam</p>
         </div>
 
         <div class="icon-wrapper">
-            <img class="control-icon" id="mic-btn" src="../images/videocall/microphone.svg" />
-            <p>Mic</p>
+          <img class="control-icon" id="mic-btn" src="../images/videocall/microphone.svg" />
+          <p>Mic</p>
         </div>
 
         <div class="icon-wrapper">
-            <img class="control-icon" id="leave-btn" src="../images/videocall/end-call.svg" />
-            <p>Leave</p>
+          <img class="control-icon" id="leave-btn" src="../images/videocall/end-call.svg" />
+          <p>Leave</p>
         </div>
-        
-       
-        
-        
+
+
+
+
+      </div>
+
+      <div class="refugeeInfo">
+        <p>Refugee Information:</p>
+        <form action=#">
+          <input type="text" id="firstname" name="firstname" placeholder="Firstname">
+
+          <input type="text" id="lastname" name="lastname" placeholder="Lastname">
+
+
+          <input type="text" id="languages" name="languages" placeholder="Languages spoken">
+
+
+          <input type="text" id="helpneeded" name="helpneeded" placeholder="Help needed">
+
+          <input type="text" id="importantnotes" name="importantnotes" placeholder="Important notes">
+
+          <button>Submit</button>
+        </form>
+
+      </div>
+
     </div>
-
-    <div class="refugeeInfo">
-      <p>Refugee Information:</p>
-      <form action=#">
-            <input type="text" id="firstname" name="firstname" placeholder="Firstname">
-         
-            <input type="text" id="lastname" name="lastname" placeholder="Lastname">
-        
-            
-            <input type="text" id="languages" name="languages" placeholder="Languages spoken">
-        
-            
-            <input type="text" id="helpneeded" name="helpneeded" placeholder="Help needed">
-         
-            <input type="text" id="importantnotes" name="importantnotes" placeholder="Important notes">
-         
-        <button>Submit</button>
-    </form>
-
-    </div>
-
-</div>
   </main>
-  
+
   <script src="https://download.agora.io/sdk/release/AgoraRTC_N.js"></script>
   <script src="../script/volunteer_video_call.js"></script>
-  </body>
+</body>
+
 </html>

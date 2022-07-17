@@ -33,6 +33,7 @@ flag.addEventListener('click',async()=>{
     await joinStreams()
     document.querySelector('.flags').style.display = "none";
     document.querySelector('.video-call').style.display = "block";
+    document.querySelector('.video-call').style.height = "75vh";
     document.getElementById('footer').style.display = 'flex'
     
 });
